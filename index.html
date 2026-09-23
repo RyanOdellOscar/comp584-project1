@@ -56,11 +56,57 @@
 
 			a:hover {
   				text-decoration: underline;
-				color: green;
+				color: red;
 			}
-		
+			a.button {
+				color: blue !important;
+				transition: all 0.3s ease;
+			}
+			a.button:hover {
+				text-decoration: bold !important;
+				color: rgb(35, 247, 247) !important;
+				transform: scale(1.2);
+			}
+			.clickme td:hover {
+				background-color: rgb(184, 73, 26) !important;
+			}
+
+			/* CSS Animations */
+			@keyframes fadeIn {
+				from { opacity: 0; transform: scale(0.75);}
+				to { opacity: 1; transform: scale(1);}
+			}
+			.fade1 {animation: 1s 1 fadeIn; }
+			.fade2 {animation: 2s 1 fadeIn; }
 
 			/* Responsive styles */
+			@media screen and (max-width: 600px) {
+				.mobile {
+					width: 100% !important;
+				}
+				.block {
+					display: block !important;
+					width: 100% !important;
+				}
+			}
+
+			/* Interactive Elements */
+			/* hide inputs */
+			input {display: none; }
+			/* make labels clickable */
+			label {cursor: pinter; }
+			/* hide slides */
+			.slide {display: none; width: 25% !important;}
+
+			/* show checked slides */
+			#base:checked ~ .base,
+			#black:checked ~ .black,
+			#white:checked ~ .white {
+				display: block;
+				background-image: url('images/chasm.jpg');
+				background-size: cover; 
+				background-position: center;
+			}
 	
 		</style>
 	</head>
@@ -72,7 +118,7 @@
 	  <!-- Logo image -->
 	                <tr width="500">
 						<td background-color="lightblue" width="500">      
-	  						<img src="images/logo.png" alt="Company Logo" width="200" border="0" style="display: block; max-width: 100%; min-width: 100px;">
+	  						<img src="images/logo.jpg" alt="Company Logo" width="200" border="0" style="display: block; max-width: 100%; min-width: 100px;">
 						</td>
 					</tr>
     
@@ -80,14 +126,14 @@
 		<!-- Headline -->
 		 			<tr class="headline">
 						<td>
-							<h1 style="text-align:center; color: blue; font-size: 50px;">Welcome to Our Newsletter</h1>
+							<h1 style="text-align:center; color: blue; font-size: 50px;">Are Ice Type Pokemon really bad?</h1>
 						</td>
 		 			</tr>
 
 		<!-- Hero Image -->
 					<tr>	
 		 				<td class="span-image" style="display: block; background-color: greenyellow;">
-		 					<img src="images/hero.png" alt="Company Product" width="500" border="0" style="display: block; max-width: 100%; min-width: 100px; width: 100%;">
+		 					<img src="images/hero.jpg" alt="Company Product" width="500" border="0" style="display: block; max-width: 100%; min-width: 100px; width: 100%;">
 		 				</td>
 		 			</tr>
 		 		</table>
@@ -97,12 +143,84 @@
 				<table class="body-copy" border="0" cellpadding="0" cellspacing="0" width="600" role="presentation" align="center">
 					<tr>
 						<td bg-image="images/bg.jpg" style="background-image: url('images/bg.jpg'); background-size: cover; background-position: center; padding: 20px; color: #333333; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5;">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
+							<p>Throughout the long history of the Pokémon franchise, Ice types get a bad rap for being "glass cannons" with a rough defensive typing, but their value lies more on the ofensive side of things. 
+								Ice is the only type that resists itself and nothing else defensively while hitting four types super effectively on offense — Dragon, Flying, Grass, and Ground — which is one of the best offensive coverage spreads in the game. A well-built Ice-type sweeper like Weavile, Kyurem, or Mamoswine can punch through teams that other types simply can't touch, especially dragon-heavy or ground-based defensive cores that shrug off Fire, Electric, or Fighting attacks. Offense wins games, and Ice types are built to end them quickly.</p>
+							<p>The defensive picture, though, depends heavily on typing pairing rather than being uniformly bad or good. Steel/Ice is genuinely strong on defense — Steel's resistances carry over almost entirely, and the pairing adds only Fighting and Fire as weaknesses without creating a 4x anywhere. Dark/Ice is the opposite case: Weavile is 4x weak to Fighting and weak to Bug, Fire, Rock, and Steel, a real defensive liability. Weavile succeeds on speed and power despite its typing, not because the pairing fixed anything. 
+								So Ice isn't automatically patched by a good secondary type — some pairings solve the weakness problem, others just trade defense for offense entirely.</p>
+							<p>Ice's clearest strategic value shows up against Dragon and Flying, two of the game's most dominant archetypes — though it's worth being precise about where it actually wins that matchup. Fairy is the better pure answer to Dragon: it resists Dragon completely, carries only two weaknesses, and covers Dragon, Dark, and Fighting on offense. Ice, by contrast, only trades neutral hits with Dragon on defense. Where Ice pulls ahead is breadth, not the Dragon matchup itself — it's super effective against Dragon, Flying, Grass, and Ground, and critically, it's the only type among that group with answers to Flying and Ground, matchups Fairy can't touch at all. This isn't theoretical: Dragonite, Salamence, Flygon, and Garchomp — four of the most consistently top-tier Pokémon across generations — are all 4x weak to Ice specifically because they pair Dragon with Flying or Ground, the exact combination Fairy has no leverage against. 
+								A team without an Ice-type attacker isn't just missing a Dragon answer — since Fairy often covers that better in isolation — it's missing the one type that punishes the specific Dragon/Flying and Dragon/Ground cores that have defined the metagame for over a decade.</p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+								<tr>
+									<td>
+										<h1 align="center" style="font-size: 18px;">Ice Type Weather Conditions</h1>
+										<!-- left column -->
+										 <table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation" class="block" width="48%">
+											<tr>
+												<td style="padding: 20px; line-height: 24px;">
+													<h2 align="center" style="font-size: 16px; font-weight: bold;">Generation III - VIII</h2>
+													<p align="justify">Hail was introduced in Generation III, with Pokémon Ruby and Sapphire in 2002 (Japan) / 2003 (international). It joined Sandstorm as one of the weather conditions added that generation, though it didn't get a real competitive niche until Generation IV, when it started making Blizzard bypass its accuracy check entirely (always hits in Hail).
+														other pokemon abilities like Ice Body and Snow Cloak also benefited from hail, but the payoff from is always too narrow to justify running it over other weather like sandstorm which behaves the same but give rock-types a boost in special defense while hail did nothing type-wide beyond but chip non ice types.
+													</p>
+												</td>
+											</tr>
+										 </table>
+										 <!-- right column -->
+										 <table align="right" border="0" cellpadding="0" cellspacing="0" role="presentation" class="block" width="48%">
+											<tr>
+												<td style="padding: 20px; line-height: 24px;">
+													<h2 align="center" style="font-size: 16px; font-weight: bold;">Generation IX - Onwards</h2>
+													<p align="justify">Game Freak finally reworked Hail in Generation IX changing it into the new snow weather condition for the Pokemon Scarlet and Violet games continuing to Pokemon Champions. The new snow weather condition has more changes beyond its name. The biggest improvement was that now whenever snow was up, it would boost the special defense of all ice type Pokemon mitigating the problem of ice types being weak defensively.
+														The snow also removes hail chip so other pokemon types can safely support snow setters. Spamming accurate Blizzards in snow is now a more viable strategy.
+													</p>
+												</td>
+											</tr>
+										 </table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+								<tr>
+									<td>
+										<h1 align="center" style="font-size: 18px;">Top Ice Types</h1>
+										<!-- left column -->
+										 <table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation" class="block" width="33%">
+											<tr>
+												<td style="padding: 20px; line-height: 24px;">
+													<h2 align="center" style="font-size: 16px; font-weight: bold;">Mamoswine</h2>
+													<img src="images/mamoswine.png" alt="Mamoswine" width="100%" style="display: block; margin: 0 auto;">
+												</td>
+											</tr>
+										 </table>
+										 <!-- middle column -->
+										 <table align="right" border="0" cellpadding="0" cellspacing="0" role="presentation" class="block" width="33%">
+											<tr>
+												<td style="padding: 20px; line-height: 24px;">
+													<h2 align="center" style="font-size: 16px; font-weight: bold;">Frosslass</h2>
+													<img src="images/froslass.png" alt="Frosslass" width="100%" style="display: block; margin: 0 auto;">
+												</td>
+											</tr>
+										 </table>
+										 <!-- right column -->
+										 <table align="right" border="0" cellpadding="0" cellspacing="0" role="presentation" class="block" width="33%">
+											<tr>
+												<td style="padding: 20px; line-height: 24px;">
+													<h2 align="center" style="font-size: 16px; font-weight: bold;">Baxcalibur</h2>
+													<img src="images/baxcalibur.png" alt="Baxcalibur" width="100%" style="display: block; margin: 0 auto;">
+												</td>
+											</tr>
+										 </table>
+									</td>
+								</tr>
+							</table>
 						</td>
 					</tr>
 		 		</table>
@@ -110,14 +228,36 @@
 
 		<!-- Button -->
 		 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td align="center" style="padding: 20px;">
+					<p style="margin: 100px 0 30px 0; font-size: 18px;"> Fun Fact: The only ice-type Pokemon that has 3 different forms, all of which keep the ice-type is Kyurem.</p>
+					<!-- triggers -->
+					<input type="radio" name="slides" id="base" checked>
+					<input type="radio" name="slides" id="black">
+					<input type="radio" name="slides" id="white">
+
+					<label for="base" class="slide-label" style="border: 2px solid lightskyblue; display: inline-block; padding: 4px
+					20px;">Base Kyurem</label>
+					<label for="black" class="slide-label" style="border: 2px solid black; display: inline-block; padding: 4px
+					20px;">Black Kyurem</label>
+					<label for="white" class="slide-label" style="border: 2px solid rgb(216, 221, 224); display: inline-block; padding: 4px
+					20px;">White Kyurem</label>
+
+					<!-- Content to be switched -->
+					 <img class="slide base" src="images/kyurem.png" alt="Kyurem" style="padding: 20px;">
+					 <img class="slide black" src="images/kyurem-black.png" alt="Black Kyurem" style="padding: 20px;">
+					 <img class="slide white" src="images/kyurem-white.png" alt="White Kyurem" style="padding: 20px;">
+				</td>
+			</tr>
 		  <tr>
 		    <td align="center" style="padding: 70px;">
 		      <table class="clickme" border="0" cellspacing="0" cellpadding="0">
 		        <tr>
+				 <p>To know more about the Ice Type, click the button below.</p>
 		          <td bgcolor="yellow" style="padding: 12px 18px 12px 18px; border-radius: 3px;" align="center">
 		            
-						<a href="#" target="_blank" style="color: blue; text-decoration: none; font-size: 15px; display: inline-block;">
-						Subscribe to us!</a>
+						<a class="button"href="https://bulbapedia.bulbagarden.net/wiki/Ice_(type)" target="_blank" style="color: blue; text-decoration: none; font-size: 15px; display: inline-block;">
+						  Learn More about Ice Types</a>
 					
 		          </td>
 		        </tr>
@@ -136,7 +276,7 @@
 					<p>City, State, ZIP</p>
 					<p><a href="mailto:info@company.com">Contact Us</a></p>
 		            <footer>
-			        	<p><a href="unsubscribe.html">Unsubscribe</a> if you must...</p>
+			        	<p><a href="https://bulbapedia.bulbagarden.net/wiki/Fire_(type)">Flame us</a> if you must...</p>
 		 			</footer>
 				</td>
 			</tr>
