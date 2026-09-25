@@ -77,6 +77,19 @@
 				to { opacity: 1; transform: scale(1);}
 			}
 			.fade1 {animation: 1s 1 fadeIn; }
+			
+			 @keyframes slide-in {
+  				from {
+    					translate: 150vw 0;
+    					scale: 200% 1;
+  					}
+
+  				to {
+    					translate: 0 0;
+    					scale: 100% 1;
+				}
+			}
+			.slide {animation: 2s 1 slide-in;}
 			.fade2 {animation: 3s 1 fadeIn; }
 
 			/* Responsive styles */
@@ -118,7 +131,7 @@
 	  <!-- Logo image -->
 	                <tr width="500">
 						<td background-color="lightblue" width="500">      
-	  						<img src="images/logo.jpg" alt="Company Logo" width="200" border="0" style="display: block; max-width: 100%; min-width: 100px;">
+	  						<img class="slide" src="images/logo.jpg" alt="Company Logo" width="200" border="0" style="display: block; max-width: 100%; min-width: 100px;">
 						</td>
 					</tr>
     
